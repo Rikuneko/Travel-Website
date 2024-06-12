@@ -7,17 +7,15 @@ function App() {
   const [searchText, setSearchText] = useState("");
 
   const getTrips = async () => {
-    const tripsDataFromServer = await axios.get(`http://localhost:4001/trips?keywords=${searchText}`);
+    const tripsDataFromServer = await axios.get(
+      `http://localhost:4001/trips?keywords=${searchText}`
+    );
     setTrips(tripsDataFromServer.data.data);
   };
 
   useEffect(() => {
     getTrips();
   }, [searchText]);
-
-  const truncateText = (text, length) => {
-    return text.length > length ? text.slice(0, length) + "..." : text;
-  };
 
   return (
     <div className="App">
@@ -39,8 +37,10 @@ function App() {
               </div>
               <div className="trip-content">
                 <h2>{item.title}</h2>
-                <p>{truncateText(item.description, 100)}</p>
-                <a href={item.url} target="_blank">อ่านต่อ</a>
+                <p>{item.description.substring(0, 100)}...</p>
+                <a href={item.url} target="_blank">
+                  อ่านต่อ
+                </a>
                 <p>หมวด {item.tags.join(" ")}</p>
               </div>
             </div>

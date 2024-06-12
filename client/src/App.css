@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin: 20px;
+  font-size: 48px;
+  color: cornflowerblue;
+}
+
+input {
+  width: 60%;
+  padding: 10px;
+  margin: 20px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+.trip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trip-list {
+  display: flex;
+  margin: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.trip-image {
+  flex: 0 0 500px;
+  height: 350px;
+}
+
+.trip-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.trip-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.trip-content h2 {
+  margin: 10px 0;
+  font-size: 28px;
+}
+
+.trip-content p {
+  margin: 10px 0;
+  color: dimgray;
+  font-size: 18px;
+}
+
+.trip-content a {
+  display: block;
+  margin-top: 8px;
+  color: blue;
+  text-decoration: underline;
+  font-size: 18px;
+}

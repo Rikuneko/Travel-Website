@@ -8,7 +8,7 @@ function App() {
 
   const getTrips = async () => {
     const tripsDataFromServer = await axios.get(
-      `http://localhost:4001/trips?keywords=${searchText}`
+      `https://travel-website-server.vercel.app/trips?keywords=${searchText}`
     );
     setTrips(tripsDataFromServer.data.data);
   };
